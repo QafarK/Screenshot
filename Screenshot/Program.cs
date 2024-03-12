@@ -28,10 +28,11 @@ do
     {
         if (files.Length == 0)
             Console.WriteLine("Folder is NULL");
-
+        else
+        {
         foreach (var file in files)
                 Console.WriteLine(file);
- 
+        }
 
         Console.WriteLine();
     }
