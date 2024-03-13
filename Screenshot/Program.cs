@@ -5,8 +5,8 @@ Console.WriteLine();
 
 Size size = new(1920, 1080);
 Rectangle bounds = new Rectangle(Point.Empty, size);
-Bitmap screenShot = new Bitmap(bounds.Width, bounds.Height);
-Graphics graphics = Graphics.FromImage(screenShot);
+using Bitmap screenShot = new Bitmap(bounds.Width, bounds.Height);
+using Graphics graphics = Graphics.FromImage(screenShot);
 graphics.CopyFromScreen(0, 0, 0, 0, size);
 
 if (!Directory.Exists($"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\\Step"))
